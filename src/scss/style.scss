@@ -1,3 +1,10 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
 @import "footer";
 @import "header";
 @import "frontpage";
+
+//colors
+$primary: #1A8FDD;
+$secondary: #fff;
+$bg: #000;
