@@ -1,21 +1,69 @@
 //Apis
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-//Packaged
+//Packages
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 //Files
 @import "footer";
 @import "header";
 @import "frontpage";
+@import "recruitment";
 
-h1, h2, h3, h4, h5, h6, p, span {
+/*
+*
+*   Global settings
+*
+*/
+
+h1, h2, h3, h4, h5, h6, p, a, span {
     margin: 0;
     padding: 0;
     font-family: 'Inter';
 }
 
-//colors
+a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+//Colors
 $primary: #1A8FDD;
-$secondary: #fff;
-$bg: #000;
+$white: #fff;
+$black: #000;
+
+//Buttons
+.btn {
+    border-radius: 75px;
+    padding: 5px 30px;  
+
+    color: $white;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-primary {
+        background-color: $primary;
+
+        &:hover {
+            
+        }
+    }
+
+    &-outline {
+        &-primary {
+            background-color: $black;
+            border: 1px solid $primary;
+
+            &:hover {
+                
+            }
+        }
+    }
+}

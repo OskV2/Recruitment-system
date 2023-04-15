@@ -1,0 +1,18 @@
+.nav {
+    background-color: black;
+    padding: 20px 0px;
+
+    &__item {
+        max-width: 250px;
+
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        letter-spacing: 4px;
+
+        &--active {
+            background-color: $primary !important;
+            border: 1px solid $white !important;
+        }
+    }
+}

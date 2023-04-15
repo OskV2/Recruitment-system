@@ -1,5 +1,24 @@
 <?php
     //start of template
+
+    $buttons = [
+        [
+            'title' => 'STRONA GŁÓWNA',
+            'link'  => '../index.php'
+        ],
+        [
+            'title' => 'OFERTY PRACY',
+            'link'  => 'recruitment.php'
+        ],
+        [
+            'title' => 'SPRAWDŹ APLIKACJĘ',
+            'link'  => 'check.php'
+        ],
+        [
+            'title' => 'KONTAKT',
+            'link'  => 'contact.php'
+        ],
+    ]
 ?>
 
 <!DOCTYPE html>
@@ -10,18 +29,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rekrutacja</title>
 
-    <link rel="stylesheet" href="/style.css">
-    <script src="src/js/app.js"></script>
+    <link rel="stylesheet" href="../dist/style.css">
+    <script type="module" src="../dist/js/app.js"></script>
 </head>
 <body>
-    <header>
+    <header class="nav">
         <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.php">Strona główna</a></li>
-                    <li><a href="index.php?view=login">Logowanie</a></li>
-                    <li><a href="index.php?view=register">Rejestracja</a></li>
-                </ul>
+            <nav class="row d-flex justify-content-between">
+                <?php foreach ($buttons as $key => $button): ?>
+                    <a class="btn btn-outline-primary nav__item" href="<?php echo $button['link'] ?>"><?php echo $button['title']; ?></a>
+                <?php endforeach; ?>
             </nav>
         </div>
     </header>
