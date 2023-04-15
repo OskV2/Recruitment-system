@@ -7,7 +7,7 @@
     <title>Rekrutacja - strona główna</title>
 
     <link rel="stylesheet" href="./dist/style.css">
-    <script src="dist/app.js"></script>
+    <script src="dist/js/app.js"></script>
 </head>
     <body>
         <div class="row d-flex frontpage">
