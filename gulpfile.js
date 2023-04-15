@@ -15,9 +15,9 @@ function scssTask() {
 
 //Javascript task
 function jsTask() {
-    return src('src/js/app.js', {sourcemaps: true})
+    return src('src/js/*.js', {sourcemaps: true})
         .pipe(terser())
-        .pipe(dest('dist', {sourcemaps: '.'}));
+        .pipe(dest('dist/js', {sourcemaps: '.'}));
 }
 
 //Browsersync tasks
