@@ -1,0 +1,145 @@
+.recruitment {
+    background-color: black;
+
+    &__hero {
+        margin: 50px 0px;
+
+        &-title, &-description {
+            color: $white;
+            font-weight: 700;
+            line-height: 70px;
+        }
+
+        &-title {
+            font-size: 50px;
+        }
+
+        &-description {
+            font-size: 24px;
+        }
+    }
+
+    &__offer {
+        &-title {
+            color: $white;
+            font-size: 36px;
+            line-height: 70px;
+            font-weight: 700;
+        }
+
+        &-subtitle {
+            color: $white;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 70px;
+        }
+
+        &-description {
+            color: $white;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+        &-content {
+            padding-left: 40px;
+
+            span {
+                color: $white;
+            }
+        }
+
+        &-select {
+            margin-bottom: 20px;
+        }
+
+        &-requirements, &-benefits {
+            list-style: none;
+            
+            li {
+                display: flex;
+                align-items: center;
+
+                span {
+                    color: $white;
+                }
+            }
+        }
+
+        &-requirements {
+        }
+
+        &-benefits {
+        }
+    }
+
+    &__form {
+        &-title {
+            color: $white;
+            font-size: 36px;
+            line-height: 70px;
+            font-weight: 700;
+        }
+
+        &-content {
+            padding-left: 40px;
+        }
+
+        &-input {
+            width: 100%;
+            background-color: #252525;
+            border-radius: 75px;
+            height: 50px;
+            margin: 0px 0px 30px 0px;
+            padding-left: 40px;
+            border: none;
+            color: $white;
+
+            &::placeholder {
+                color: #7e7e7e;
+            }
+        }
+
+        &-textarea {
+            width: 100%;
+            background-color: #252525;
+            border-radius: 75px;
+            height: 50px;
+            margin: 0px 0px 30px 0px;
+            padding: 20px 0px 0px 40px;
+            border: none;
+            color: $white; 
+
+            &::placeholder {
+                color: #7e7e7e;
+            }
+        }
+
+        &-name {
+            width: 345px;
+            margin-right: 20px;
+        }
+
+        &-surname {
+            width: 755px;
+        }
+
+        &-email {
+            width: 600px;
+            margin-right: 20px;
+        }
+
+        &-phone {
+            width: 405px;
+        }
+
+        &-href {
+            width: 1100px;
+        }
+
+        &-more {
+            width: 1275px;
+        }
+
+    }
+}
