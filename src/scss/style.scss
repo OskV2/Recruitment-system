@@ -16,7 +16,7 @@
 *
 */
 
-h1, h2, h3, h4, h5, h6, p, a, span {
+h1, h2, h3, h4, h5, h6, p, a, span, ul, li {
     margin: 0;
     padding: 0;
     font-family: 'Inter';
@@ -35,6 +35,8 @@ a {
 $primary: #1A8FDD;
 $white: #fff;
 $black: #000;
+$gray: #252525;
+$lightgray:#7e7e7e;
 
 //Buttons
 .btn {
