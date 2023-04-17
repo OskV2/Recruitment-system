@@ -15,7 +15,7 @@
         <div class="navbar-item"><a href="onboarding.php">WDRAŻANIE</a></div>
         <div class="navbar-item"><a href="admin.php">ADMIN</a></div>
     </div>
-    <form id="formularz" action="insert.php" method="post" target="hiddenFrame" onsubmit="setTimeout(function () { window.location.reload(); }, 10)">        
+    <form id="formularz" action="insertOffer.php" method="post" target="hiddenFrame" onsubmit="setTimeout(function () { window.location.reload(); }, 10)">        
         <label for="firma">Nazwa stanowiska:</label><br>
         <input type="text" id="firma" name="firma"><br>
         <label for="telefon">Opis stanowiska:</label><br>
