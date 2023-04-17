@@ -2,10 +2,10 @@
 $server = "localhost";
 $username = "root";
 $password = "root";
-$dbname = "crm";
+$dbname = "rekrutacja";
 
 $conn = mysqli_connect($server, $username, $password, $dbname);
-$query="select * from kontrahent"; 
+$query="select * from application"; 
 $result=mysqli_query($conn,$query); 
 
 $i = 0;
@@ -41,13 +41,16 @@ $i = 0;
 		<?php while($rows=mysqli_fetch_assoc($result)) 
 		{
             $i += 1;
-            if($rows['stage'] =='NEW'){
+            if($rows['Status'] =='1'){
         ?> 
-            <tr> <td><?php echo $rows['firma']; ?></td> 
-            <td><?php echo $rows['telefon']; ?></td>
-            <td><?php echo $rows['email']; ?></td> 
-            <td><?php echo $rows['adres']; ?></td> 
-            <td><?php echo $rows['przedstawiciel']; ?></td> 
+            <tr> <td><?php echo $rows['Name']; ?></td> 
+            <td><?php echo $rows['Surname']; ?></td>
+            <td><?php echo $rows['Email']; ?></td> 
+            <td><?php echo $rows['Phone']; ?></td> 
+            <td><?php echo $rows['App_Link']; ?></td>
+            <td><?php echo $rows['GitHub_Link']; ?></td>
+            <td><?php echo $rows['Status']; ?></td>
+            <td><?php echo $rows['Job_Off_Name']; ?></td>
             <form id="faza<?php echo $i ?>" action="stage.php" method="post" target="hiddenFrame" onsubmit="setTimeout(function () { window.location.reload(); }, 10)">
                 <td>
                     <input form="faza<?php echo $i ?>" type="submit" name="test" id="test" value="Gotowe" /><br/>

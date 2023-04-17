@@ -1,14 +1,3 @@
-<?php
-$server = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "crm";
-
-$conn = mysqli_connect($server, $username, $password, $dbname);
-$query="select * from przedstawiciele"; 
-$result=mysqli_query($conn,$query); 
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,9 +24,6 @@ $result=mysqli_query($conn,$query);
         <input type="text" id="email" name="email"><br>
         <label for="adres">Benefity:</label><br>
         <input type="text" id="adres" name="adres"><br>
-        <!-- <label for="przedstawiciel">Przedstawiciel:</label><br> -->
-        <!-- <input type="text" id="przedstawiciel" name="przedstawiciel"> -->
-        <!-- <select id="select" name="przedstawiciel" style="width: 407px;height:35px"> -->
             <?php while ($rows = mysqli_fetch_assoc($result)) {
             ?> 
                 <option value="<?php echo $rows['name'] ?>" name="produkt"><?php echo $rows['name'] ?></option>
@@ -49,6 +35,6 @@ $result=mysqli_query($conn,$query);
         <button type="submit" name="submit">Utwórz</button>
     </form>
 
-    <!-- <iframe name="hiddenFrame" class="hide" style="display: none;"></iframe> -->
+    <iframe name="hiddenFrame" class="hide" style="display: none;"></iframe>
 </body>
 </html>
