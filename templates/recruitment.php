@@ -53,7 +53,7 @@
                     <h2 class="recruitment__form-title">3. Złóż swoje podanie</h2>
                     <div class="recruitment__form-content">
                     <form id="formularz" action="hrTemplates/insert.php" method="post" target="hiddenFrame" onsubmit="setTimeout(function () { window.location.reload(); }, 10)">
-                            <input class="d-none" type="number" id="selectedOfferId" value="" />
+                            <input class="d-none" type="number" name="selectedOfferId" id="selectedOfferId" value="" />
 
                             <div class="d-flex">
                                 <div class="recruitment__form-name">
