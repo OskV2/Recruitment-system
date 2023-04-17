@@ -19,7 +19,7 @@
         <label for="firma">Nazwa stanowiska:</label><br>
         <input type="text" id="firma" name="firma"><br>
         <label for="telefon">Opis stanowiska:</label><br>
-        <input type="number" id="telefon" name="telefon"><br>
+        <input type="text" id="telefon" name="telefon"><br>
         <label for="email">Wymagania:</label><br>
         <input type="text" id="email" name="email"><br>
         <label for="adres">Benefity:</label><br>
@@ -28,6 +28,6 @@
         <button type="submit" name="submit">Utwórz</button>
     </form>
 
-    <iframe name="hiddenFrame" class="hide" style="display: none;"></iframe>
+    <!-- <iframe name="hiddenFrame" class="hide" style="display: none;"></iframe> -->
 </body>
 </html>
