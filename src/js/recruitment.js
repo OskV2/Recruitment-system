@@ -6,6 +6,8 @@ const Recruitment = () => {
     const requirements = document.querySelector("#requirements");
     const benefits = document.querySelector("#benefits");
     const formInputId = document.querySelector("#selectedOfferId");
+    const leftArrow = '<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.939341 10.9393C0.353554 11.5251 0.353554 12.4749 0.939341 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939341 10.9393ZM25 10.5L2 10.5V13.5L25 13.5V10.5Z" fill="#1A8FDD"/></svg>'
+
     //const jobInput = document.getElementById('job_input');
     let loaded = false
     let error = false
@@ -72,6 +74,9 @@ const Recruitment = () => {
                 if (requirementsArray.length > 1) {
                     requirementsArray.forEach(requirement => {
                         let li = document.createElement("li")
+                        let img = document.createElement("img")
+                        img.src = "../src/img/Arrow_right.svg"
+                        li.appendChild(img)
                         li.innerHTML = requirement
                         requirements.appendChild(li)
                     })
@@ -86,28 +91,7 @@ const Recruitment = () => {
             }
         })
         console.log(formInputId.value)
-    } 
-
-    // const requirements = document.querySelector("#requirement");
-    // //js foreach requirement
-    // requirements.innerHTML = ``
-
-    // const benefits = document.querySelector("#benefit");
-    // //js foreach benefits
-    // benefits.innerHTML = ``
+    }
 }
 
 export default Recruitment;
-
-
-//   jobSelect.addEventListener('change', function() {
-//     const selectedJob = jobSelect.value;
-//     jobInput.value = selectedJob;
-// });
-const jobSelect = document.getElementById('job'); 
-const jobInput = document.getElementById('job_input'); 
- 
-  jobSelect.addEventListener('change', function() { 
-    const selectedJob = jobSelect.value; 
-    jobInput.value = selectedJob; 
-}); 

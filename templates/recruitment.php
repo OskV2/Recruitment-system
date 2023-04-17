@@ -65,7 +65,7 @@
                             </div> 
                             <div class="d-flex">
                                 <div class="recruitment__form-email">
-                                    <input class="recruitment__form-input" type="text" placeholder="E-mail *"  id="email" name="email">>
+                                    <input class="recruitment__form-input" type="text" placeholder="E-mail *"  id="email" name="email">
                                 </div>
                                 <div class="recruitment__form-phone">
                                     <input class="recruitment__form-input" type="text" placeholder="Numer telefonu *" id="telefon" name="telefon">
@@ -86,7 +86,6 @@
                             <!-- <input class="recruitment__form-file" type="file" placeholder="Plik CV *"> -->
                             <!-- <input class="recruitment__form-file" type="file" placeholder="List motywacyjny *"> -->
                             <span>* - Pola i pliki wymagane</span>
-                            <a href=""></a>
                         </form>
                     </div>
                 </section>
