@@ -18,8 +18,9 @@ $i = 0;
 <html> 
 	<head> 
 		<title> Konsultacje </title>
-        <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
- 
+        <!-- <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>"> -->
+        <link rel="stylesheet" href="../../src/scss/hrPanel.scss">
+
 	</head> 
 	<body> 
     <div class="navbar">
