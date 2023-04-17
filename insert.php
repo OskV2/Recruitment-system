@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $dbname = "rekrutacja";
 
 $conn = mysqli_connect($server, $username, $password, $dbname);
@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
         $telefon = $_POST['telefon'];
         $link = $_POST['link'];
         $applink = $_POST['applink'];
-        $job = $_POST['job_input'];
+        $job = $_POST['selectedOfferId'];
 
         $query = "insert into application(Name,Surname,Email,Phone,App_Link,GitHub_link,Status,Job_Off_Name) values('$imie','$nazwisko','$email','$telefon','$link','$applink',1,'$job')";
 
