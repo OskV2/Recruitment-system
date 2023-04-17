@@ -52,35 +52,37 @@
                 <section class="recruitment__form">
                     <h2 class="recruitment__form-title">3. Złóż swoje podanie</h2>
                     <div class="recruitment__form-content">
-                        <form action="">
+                    <form id="formularz" action="hrTemplates/insert.php" method="post" target="hiddenFrame" onsubmit="setTimeout(function () { window.location.reload(); }, 10)">
                             <input class="d-none" type="number" id="selectedOfferId" value="" />
 
                             <div class="d-flex">
                                 <div class="recruitment__form-name">
-                                    <input class="w-100 recruitment__form-input" type="text" placeholder="Imię *">
+                                    <input class="w-100 recruitment__form-input" type="text" placeholder="Imię *" id="imie" name="imie">
                                 </div>
                                 <div class="recruitment__form-surname">
-                                    <input class="recruitment__form-input" type="text" placeholder="Nazwisko *">
+                                    <input class="recruitment__form-input" type="text" placeholder="Nazwisko *" id="nazwisko" name="nazwisko">
                                 </div>
                             </div> 
                             <div class="d-flex">
                                 <div class="recruitment__form-email">
-                                    <input class="recruitment__form-input" type="text" placeholder="E-mail *">
+                                    <input class="recruitment__form-input" type="text" placeholder="E-mail *"  id="email" name="email">>
                                 </div>
                                 <div class="recruitment__form-phone">
-                                    <input class="recruitment__form-input" type="text" placeholder="Numer telefonu *">
+                                    <input class="recruitment__form-input" type="text" placeholder="Numer telefonu *" id="telefon" name="telefon">
                                 </div>
                             </div>
                             <div class="d-flex">
                                 <div class="recruitment__form-href">
-                                    <input class="recruitment__form-input" type="text" placeholder="Link do konta Github">
+                                    <input class="recruitment__form-input" type="text" placeholder="Link do konta Github" id="link" name="link">
                                 </div>
                             </div> 
                             <div class="d-flex">
                                 <div class="recruitment__form-more">
-                                    <textarea rows="4" class="recruitment__form-textarea" placeholder="Dodatkowe informacje"></textarea>
+                                    <textarea rows="4" class="recruitment__form-textarea" placeholder="Dodatkowe informacje" id="applink" name="applink"></textarea>
                                 </div>
                             </div>
+                            <input class="recruitment__form-input" type="number" id="job_input" name="job_input" value="1" hidden >
+                            <button type="submit" name="submit">Utwórz</button>
                             <!-- <input class="recruitment__form-file" type="file" placeholder="Plik CV *"> -->
                             <!-- <input class="recruitment__form-file" type="file" placeholder="List motywacyjny *"> -->
                             <span>* - Pola i pliki wymagane</span>
