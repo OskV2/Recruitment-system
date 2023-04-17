@@ -4,23 +4,25 @@ function testfun()
     $server = "localhost";
     $username = "root";
     $password = "root";
-    $dbname = "crm";
+    $dbname = "rekrutacja";
     $conn = mysqli_connect($server, $username, $password, $dbname);
     
     // wyciągnięcie i ustawienie stageu dla tabeli deal
-    $firma = $_POST['firemka'];
+    $firma = $_POST['identify'];
     
-    $id_query = "select ID from kontrahent where firma = '$firma'";
+    $id_query = "select App_Id from application where Phone='$firma'";
     $id = mysqli_query($conn, $id_query) or die(mysqli_error());
-    $id_result = mysqli_fetch_row($id);
+    // $id_result = mysqli_fetch_row($id);
+    $id_result = $id->fetch_array();
 
-    $query = "update deal set stage='CONTACTED' where kontrahent=$id_result[0];";
+    echo $id_result[0];
+    $query = "update application set Status=2 where App_Id=$id_result[0];";
 
     $run = mysqli_query($conn, $query) or die(mysqli_error());
 
     // ustawienie stageu dla tabeli kontrahentów
-    $queryKontrahent = "update kontrahent set stage='CONTACTED' where firma='$firma';";
-    $runKontrahent = mysqli_query($conn, $queryKontrahent) or die(mysqli_error());
+    // $queryKontrahent = "update kontrahent set stage='CONTACTED' where firma='$firma';";
+    // $runKontrahent = mysqli_query($conn, $queryKontrahent) or die(mysqli_error());
 }
 
 
@@ -29,7 +31,7 @@ function deleteNew(){
     $server = "localhost";
     $username = "root";
     $password = "root";
-    $dbname = "crm";
+    $dbname = "rekrutacja";
     $conn = mysqli_connect($server, $username, $password, $dbname);
 
     // Usunięcie klucza obcego
@@ -38,8 +40,8 @@ function deleteNew(){
 
     
     // Usunięcie kontrahenta
-    $firma = $_POST['firemka'];
-    $queryDeleteNew = "delete from kontrahent where firma='$firma';";
+    $firma = $_POST['identify'];
+    $queryDeleteNew = "delete from application where Phone='$firma';";
     $runDeleteNew = mysqli_query($conn, $queryDeleteNew) or die(mysqli_error());
 
     // Przywrócenie klucza obcego

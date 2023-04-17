@@ -24,14 +24,7 @@
         <input type="text" id="email" name="email"><br>
         <label for="adres">Benefity:</label><br>
         <input type="text" id="adres" name="adres"><br>
-            <?php while ($rows = mysqli_fetch_assoc($result)) {
-            ?> 
-                <option value="<?php echo $rows['name'] ?>" name="produkt"><?php echo $rows['name'] ?></option>
-            <?php
-            }
-            // $resultvege->data_seek(0);
-            ?>
-        </select>
+
         <button type="submit" name="submit">Utwórz</button>
     </form>
 

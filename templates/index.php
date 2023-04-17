@@ -20,8 +20,8 @@ $i = 0;
 	<div class="navbar">
         <div class="navbar-item"><a href="hrTemplates/new_form.php">+</a></div>
         <div class="navbar-item"><a href="hrTemplates/nowe.php">NOWE</a></div>
-        <div class="navbar-item"><a href="hrTemplates/kontakt.php">W TRAKCIE ROZMÓW</a></div>
-        <div class="navbar-item"><a href="hrTemplates/onboarding.php">WDRAŻANIE</a></div>
+        <div class="navbar-item"><a href="hrTemplates/kontakt.php">UMÓW SPOTKANIE</a></div>
+        <div class="navbar-item"><a href="hrTemplates/onboarding.php">ROZMOWA REKRUTACYJNA</a></div>
         <div class="navbar-item"><a href="hrTemplates/admin.php">ADMIN</a></div>
     </div>
     <table class="table" align="center" border="2px"> 
