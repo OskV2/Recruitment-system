@@ -5,11 +5,17 @@
     *   Template: Strona z ofertami pracy i formularzem rekrutacyjnym
     *
     ***/
-
+    $server = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "rekrutacja";
+    
+    $conn = mysqli_connect($server, $username, $password, $dbname);
+    $query="select * from job_offer"; 
+    $result=mysqli_query($conn,$query); 
     include('../header.php') 
     //write code below
 ?>
-
 <main class="recruitment">
     <div class="container">
         <div class="row">
@@ -22,14 +28,16 @@
                 <section class="recruitment__offer">
                     <h2 class="recruitment__offer-title">1. Wybierz stanowisko, które cię interesuje</h2>
                     <div class="recruitment__offer-content">
-                        <select class="recruitment__offer-select" name="cars" id="cars" form="carform">
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
+                        <select id="job" name="job">
+                                <?php while ($rows = mysqli_fetch_assoc($result)) {
+                                ?> 
+                                <option value="<?php echo $rows['Job_Off_Id'] ?>" name="job"><?php echo $rows['Job_Off_Name'] ?></option>
+                                <?php
+                                }
+                                // $resultvege->data_seek(0);
+                                ?>
                         </select>
                     </div>
-
                     <h2 class="recruitment__offer-title">2. Przeczytaj ofertę</h2>
                     <div class="recruitment__offer-content">
                         <h3 class="recruitment__offer-subtitle">Opis stanowiska</h3>
@@ -57,34 +65,35 @@
                 <section class="recruitment__form">
                     <h2 class="recruitment__form-title">3. Złóż swoje podanie</h2>
                     <div class="recruitment__form-content">
-                        <form action="">
-
+                    <form id="formularz" action="../insert.php" method="post" target="hiddenFrame" onsubmit="setTimeout(function () { window.location.reload(); }, 10)">
                             <div class="d-flex">
                                 <div class="recruitment__form-name">
-                                    <input class="w-100 recruitment__form-input" type="text" placeholder="Imię *">
+                                    <input class="w-100 recruitment__form-input" type="text" placeholder="Imię *" id="imie" name="imie">
                                 </div>
                                 <div class="recruitment__form-surname">
-                                    <input class="recruitment__form-input" type="text" placeholder="Nazwisko *">
+                                    <input class="recruitment__form-input" type="text" placeholder="Nazwisko *" id="nazwisko" name="nazwisko">
                                 </div>
                             </div> 
                             <div class="d-flex">
                                 <div class="recruitment__form-email">
-                                    <input class="recruitment__form-input" type="text" placeholder="E-mail *">
+                                    <input class="recruitment__form-input" type="text" placeholder="E-mail *" id="email" name="email">
                                 </div>
                                 <div class="recruitment__form-phone">
-                                    <input class="recruitment__form-input" type="text" placeholder="Numer telefonu *">
+                                    <input class="recruitment__form-input" type="text" placeholder="Numer telefonu *" id="telefon" name="telefon">
                                 </div>
                             </div>
                             <div class="d-flex">
                                 <div class="recruitment__form-href">
-                                    <input class="recruitment__form-input" type="text" placeholder="Link do konta Github">
+                                    <input class="recruitment__form-input" type="text" placeholder="Link do konta Github" id="link" name="link">
                                 </div>
                             </div> 
                             <div class="d-flex">
                                 <div class="recruitment__form-more">
-                                    <textarea class="recruitment__form-textarea" placeholder="Dodatkowe informacje"></textarea>
+                                    <textarea class="recruitment__form-textarea" placeholder="Dodatkowe informacje" id="applink" name="applink"></textarea>
                                 </div>
                             </div>
+                            <input class="recruitment__form-input" type="number" id="job_input" name="job_input" value="1" hidden >
+                            <button type="submit" name="submit">Utwórz</button>
                             <!-- <input class="recruitment__form-file" type="file" placeholder="Plik CV *"> -->
                             <!-- <input class="recruitment__form-file" type="file" placeholder="List motywacyjny *"> -->
                             <span>* - Pola i pliki wymagane</span>
@@ -96,7 +105,7 @@
         </div>
     </div>
 </main>
-
+<script src="../src/js/recruitment.js"></script>
 <?php
     include('../footer.php') 
 ?>
