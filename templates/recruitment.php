@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                             <input class="recruitment__form-input" type="number" id="job_input" name="job_input" value="1" hidden >
-                            <button type="submit" name="submit">Utwórz</button>
+                            <button class="btn btn-outline-primary" type="submit" name="submit">Utwórz</button>
                             <!-- <input class="recruitment__form-file" type="file" placeholder="Plik CV *"> -->
                             <!-- <input class="recruitment__form-file" type="file" placeholder="List motywacyjny *"> -->
                             <span>* - Pola i pliki wymagane</span>
