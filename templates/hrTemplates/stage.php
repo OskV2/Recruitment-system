@@ -15,7 +15,7 @@ function testfun()
     // $id_result = mysqli_fetch_row($id);
     $id_result = $id->fetch_array();
 
-    echo $id_result[0];
+    // echo $id_result[0];
     $query = "update application set Status=2 where App_Id=$id_result[0];";
 
     $run = mysqli_query($conn, $query) or die(mysqli_error());
@@ -41,9 +41,9 @@ function deleteNew(){
     
     // Usunięcie kontrahenta
     $firma = $_POST['identify'];
-    $queryDeleteNew = "delete from application where Phone='$firma';";
+    $queryDeleteNew = "delete from application where Phone='$firma'";
     $runDeleteNew = mysqli_query($conn, $queryDeleteNew) or die(mysqli_error());
-
+    echo $firma;
     // Przywrócenie klucza obcego
     // $queryDeleteFK = "alter table deal on delete restrict;";
     // $runDeleteFK = mysqli_query($conn, $queryDeleteFK) or die(mysqli_error());

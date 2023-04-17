@@ -21,7 +21,7 @@ $i = 0;
 	<div class="navbar">
         <div class="navbar-item"><a href="new_form.php">+</a></div>
         <div class="navbar-item"><a href="nowe.php">NOWE</a></div>
-        <div class="navbar-item"><a href="kontakt.php">UMÓW SPOTKANIE</a></div>
+        <div class="navbar-item"><a href="test.php">UMÓW SPOTKANIE</a></div>
         <div class="navbar-item"><a href="onboarding.php">ROZMOWA REKRUTACYJNA</a></div>
         <div class="navbar-item"><a href="admin.php">ADMIN</a></div>
     </div>
