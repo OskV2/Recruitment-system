@@ -75,16 +75,23 @@ const Recruitment = () => {
                     requirementsArray.forEach(requirement => {
                         let li = document.createElement("li")
                         let img = document.createElement("img")
-                        img.src = "../src/img/Arrow_right.svg"
+                        img.src = "../src/img/Arrow_right.svg"                        
+                        let span = document.createElement("span")
+                        span.innerHTML = requirement
                         li.appendChild(img)
-                        li.innerHTML = requirement
+                        li.appendChild(span)
                         requirements.appendChild(li)
                     })
                 }
                 if (benefitsArray.length > 1){
                     benefitsArray.forEach(benefit => {
                         let li = document.createElement("li")
-                        li.innerHTML = benefit
+                        let img = document.createElement("img")
+                        img.src = "../src/img/Arrow_left.svg"
+                        let span = document.createElement("span")
+                        span.innerHTML = benefit
+                        li.appendChild(img)
+                        li.appendChild(span)
                         benefits.appendChild(li)
                     })
                 }

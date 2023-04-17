@@ -29,7 +29,7 @@ $i = 0;
 	</div>
 	<table class="table" align="center" border="2px">
 		<tr>
-			<th colspan="7">
+			<th colspan="8">
 				<h2>Nowe zlecenia</h2>
 			</th>
 		</tr>
