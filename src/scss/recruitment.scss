@@ -51,6 +51,16 @@
 
         &-select {
             margin-bottom: 20px;
+            padding-left: 30px;
+
+            height: 60px;
+            background-color: #252525;
+            border-radius: 75px;
+            color: $white;
+            font-size: 24px;
+            line-height: 40px;
+            font-weight: 500;
+            border: unset;
         }
 
         &-requirements, &-benefits {

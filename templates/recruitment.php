@@ -22,7 +22,9 @@
                 <section class="recruitment__offer">
                     <h2 class="recruitment__offer-title">1. Wybierz stanowisko, które cię interesuje</h2>
                     <div class="recruitment__offer-content">
-                    <select id="select" name="job"></select>
+                        <div class="d-flex">
+                            <select class="w-100 recruitment__offer-select" id="select" name="job"></select>
+                        </div>
                     </div>
 
                     <h2 class="recruitment__offer-title">2. Przeczytaj ofertę</h2>
