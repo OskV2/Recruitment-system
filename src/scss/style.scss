@@ -5,6 +5,7 @@
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 //Files
+@import "admin";
 @import "footer";
 @import "header";
 @import "frontpage";
@@ -20,6 +21,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, ul, li {
     margin: 0;
     padding: 0;
     font-family: 'Inter';
+    color: $white;
 }
 
 a {
@@ -65,6 +67,15 @@ $lightgray:#7e7e7e;
 
             &:hover {
                 
+            }
+        }
+
+        &-alert {
+            background-color: $black;
+            border: 1px solid red;
+
+            &:hover {
+                background-color: red;
             }
         }
     }

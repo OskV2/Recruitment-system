@@ -1,5 +1,10 @@
 <?php
-    //start of template
+
+    /***
+    *
+    *   Header for client side pages
+    *
+    ***/
 
     $buttons = [
         [
@@ -27,6 +32,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Rekrutacja</title>
 
     <link rel="stylesheet" href="../dist/style.css">
