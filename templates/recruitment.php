@@ -64,18 +64,26 @@
                                 </div>
                             </div>
                             <div class="d-flex">
-                                <div class="recruitment__form-href">
-                                    <input class="recruitment__form-input" type="text" placeholder="Link do konta Github" id="link" name="link">
+                                <div class="recruitment__form-github">
+                                    <input class="recruitment__form-input" type="text" placeholder="Link do konta Github" id="github_link" name="github_link">
+                                </div>
+                                <div class="recruitment__form-linkedin">
+                                    <input class="recruitment__form-input" type="text" placeholder="Link do konta LinkedIn" id="linkedin_link" name="linkedin_link">                                    
                                 </div>
                             </div> 
+
                             <div class="d-flex">
                                 <div class="recruitment__form-more">
-                                    <textarea rows="4" class="recruitment__form-textarea" placeholder="Dodatkowe informacje" id="applink" name="applink"></textarea>
+                                    <input class="recruitment__form-input" placeholder="Dodatkowe informacje" id="additional_info" name="additional_info">
                                 </div>
                             </div>
+
+                            <div class="d-flex">
+                                <input class="recruitment__form-file" type="file" id="cv" placeholder="Plik CV *">
+                                <input class="recruitment__form-file" type="file" id="lm" placeholder="List motywacyjny *">
+                            </div>
+                            
                             <button class="btn btn-outline-primary" type="submit" name="submit">Utwórz</button>
-                            <input class="recruitment__form-file" type="file" id="cv" placeholder="Plik CV *">
-                            <input class="recruitment__form-file" type="file" id="lm" placeholder="List motywacyjny *">
                             <span>* - Pola i pliki wymagane</span>
                         </form>
                     </div>
