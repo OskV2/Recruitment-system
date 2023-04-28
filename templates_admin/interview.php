@@ -2,8 +2,8 @@
 
 	include('../templates_sql/db_connect.php');
 
-	$query = "SELECT * FROM application WHERE Status = '3' ORDER BY Data_rozmowy ASC";
-	$result = mysqli_query($conn, $query);
+	$query = "SELECT * FROM Application WHERE Status = '3' ORDER BY Data_rozmowy ASC";
+	$result = $conn->query($query);
 	$i = 0;
 
 	include('../header_admin.php');
