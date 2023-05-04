@@ -16,7 +16,7 @@
                     <div class="col-12">
 						<h1 class="admin__title">Kandydaci umówieni na rozmowę rekrutacyjną</h1>
                         <ul class="admin__collapse">
-                            <?php while($rows=mysqli_fetch_assoc($result)):
+                            <?php while($rows= $result->fetch(PDO::FETCH_ASSOC)):
                                 $i += 1;
                                 $candidate = 'candidate' . $i;
                                 if($rows['Status'] =='3'): ?> 
@@ -35,9 +35,9 @@
                                                         <span>
                                                             <?php
                                                                 $Off_name="SELECT Job_Off_Name FROM job_offer WHERE Job_Off_Id={$rows['Job_Off_Name']}";
-                                                                $Off_name_result=mysqli_query($conn,$Off_name);
-                                                                $Off_name_arr = $Off_name_result->fetch_array();
-                                                                echo $Off_name_arr[0];
+                                                                $Off_name_result=$conn->query($Off_name);
+                                                                $Off_name_arr = $Off_name_result->fetch(PDO::FETCH_ASSOC);
+                                                                echo $Off_name_arr['Job_Off_Name'];
                                                             ?>
                                                         </span>
                                                     </div>
