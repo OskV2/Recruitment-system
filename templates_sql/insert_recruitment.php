@@ -13,11 +13,11 @@ if(isset($_POST['submit'])){
         $job = $_POST['selectedOfferId'];
         $Dod_Info = $_POST['additional_info'];
 
+        // prepare SQL query
         $query = "insert into application(Name,Surname,Email,Phone,GitHub_link,Linkdin_Link,Status,Job_Off_Name,Dod_Info) values('$imie','$nazwisko','$email','$telefon','$github_link','$linkedin_link',1,'$job','$Dod_Info')";
 
-        $run = mysqli_query($conn, $query) or die(mysqli_error($mysql));
-
-        if($run){
+        // execute query and check if it was successful
+        if($conn->query($query)){
             echo "działa";
         }
         else{

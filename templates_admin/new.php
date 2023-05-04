@@ -1,9 +1,19 @@
 <?php 
 
+    // include('../templates_sql/db_connect.php');
+
+    // $query = "SELECT * FROM application"; 
+    // $result = mysqli_query($conn, $query); 
+    // $i = 0;
+
+    // include('../header_admin.php');
+
+
+    
     include('../templates_sql/db_connect.php');
 
     $query = "SELECT * FROM application"; 
-    $result = mysqli_query($conn, $query); 
+    $result = $conn->query($query);  
     $i = 0;
 
     include('../header_admin.php');
@@ -16,7 +26,7 @@
                     <div class="col-12">
                         <h1 class="admin__title">Nowe zgłoszenia</h1>
                         <ul class="admin__collapse">
-                            <?php while($rows=mysqli_fetch_assoc($result)):
+                            <?php while($rows = $result->fetch(PDO::FETCH_ASSOC)):
                                 $i += 1;
                                 $candidate = 'candidate' . $i;
                                 if($rows['Status'] =='1'): ?> 
@@ -33,12 +43,14 @@
                                                     </div>
                                                     <div class="col-4 admin__collapse-item-ab-column">
                                                         <span>
-                                                            <?php
-                                                                $Off_name="SELECT Job_Off_Name FROM job_offer WHERE Job_Off_Id={$rows['Job_Off_Name']}";
-                                                                $Off_name_result=mysqli_query($conn,$Off_name);
-                                                                $Off_name_arr = $Off_name_result->fetch_array();
-                                                                echo $Off_name_arr[0];
-                                                            ?>
+                                                        <?php
+                                                            $Off_name = "SELECT Job_Off_Name FROM job_offer WHERE Job_Off_Id = :jobOffId";
+                                                            $Off_name_result = $conn->prepare($Off_name);
+                                                            $Off_name_result->bindParam(':jobOffId', $rows['Job_Off_Name'], PDO::PARAM_INT);
+                                                            $Off_name_result->execute();
+                                                            $Off_name_arr = $Off_name_result->fetch(PDO::FETCH_NUM);
+                                                            echo $Off_name_arr[0];
+                                                        ?>
                                                         </span>
                                                     </div>
                                                 </div>
