@@ -78,12 +78,18 @@
                                 </div>
                             </div>
 
-                            <div class="d-flex">
-                                <input class="recruitment__form-file" type="file" id="cv" title=" " placeholder="Plik CV *">
-                                <input class="recruitment__form-file" type="file" id="lm" title=" " placeholder="List motywacyjny *">
+                            <div class="d-flex align-items-center">
+                                <label class="recruitment__form-file">
+                                    <input type="file" id="cv">
+                                    Plik CV *
+                                </label>
+                                <label class="recruitment__form-file">
+                                    <input  type="file" id="lm">
+                                    List motywacyjny *
+                                </label>
+                                <span>* - Pola i pliki wymagane</span>
                             </div>
-                            <span>* - Pola i pliki wymagane</span>
-
+                            
                             <button class="ms-auto btn btn-outline-primary" type="submit" name="submit">Utwórz</button>
                         </form>
                     </div>
