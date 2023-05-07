@@ -44,7 +44,7 @@
                 <section class="recruitment__form">
                     <h2 class="mb-4 recruitment__form-title">3. Złóż swoje podanie</h2>
                     <div class="recruitment__form-content">
-                    <form id="formularz" action="../templates_sql/insert_recruitment.php" method="post" target="hiddenFrame" onsubmit="setTimeout(function () { window.location.reload(); }, 10)">
+                    <form id="formularz" action="./landing-page.php" method="post" target="hiddenFrame" onsubmit="setTimeout(function () { window.location.reload(); }, 10)">
                             <input class="d-none" type="number" name="selectedOfferId" id="selectedOfferId" value="" />
 
                             <div class="d-flex">
