@@ -28,21 +28,21 @@
                     </div>
 
                     <h2 class="recruitment__offer-title">2. Przeczytaj ofertę</h2>
-                    <div class="recruitment__offer-content">
+                    <div class="recruitment__offer-content d-flex flex-column">
                         <h3 class="recruitment__offer-subtitle">Opis stanowiska</h3>
                         <p class="recruitment__offer-description" id="description"></p>
                         
                         <h3 class="recruitment__offer-subtitle">Wymagania</h3>
-                        <span>To nam dasz od siebie</span>
+                        <span class="mb-2">To nam dasz od siebie</span>
                         <ul class="recruitment__offer-requirements" id="requirements"></ul>
                         
                         <h3 class="recruitment__offer-subtitle">Benefity</h3>
-                        <span>A to otrzymasz w zamian</span>
+                        <span class="mb-2">A to otrzymasz w zamian</span>
                         <ul class="recruitment__offer-benefits" id="benefits"></ul>
                     </div>
                 </section>
                 <section class="recruitment__form">
-                    <h2 class="recruitment__form-title">3. Złóż swoje podanie</h2>
+                    <h2 class="mb-4 recruitment__form-title">3. Złóż swoje podanie</h2>
                     <div class="recruitment__form-content">
                     <form id="formularz" action="../templates_sql/insert_recruitment.php" method="post" target="hiddenFrame" onsubmit="setTimeout(function () { window.location.reload(); }, 10)">
                             <input class="d-none" type="number" name="selectedOfferId" id="selectedOfferId" value="" />
@@ -79,12 +79,12 @@
                             </div>
 
                             <div class="d-flex">
-                                <input class="recruitment__form-file" type="file" id="cv" placeholder="Plik CV *">
-                                <input class="recruitment__form-file" type="file" id="lm" placeholder="List motywacyjny *">
+                                <input class="recruitment__form-file" type="file" id="cv" title=" " placeholder="Plik CV *">
+                                <input class="recruitment__form-file" type="file" id="lm" title=" " placeholder="List motywacyjny *">
                             </div>
-                            
-                            <button class="btn btn-outline-primary" type="submit" name="submit">Utwórz</button>
                             <span>* - Pola i pliki wymagane</span>
+
+                            <button class="ms-auto btn btn-outline-primary" type="submit" name="submit">Utwórz</button>
                         </form>
                     </div>
                 </section>

@@ -1,0 +1,48 @@
+.landing {
+    background-color: black;
+    min-height: calc(100vh - 313px);
+
+    &__content {
+        padding-top: 50px;
+
+        &-title, &-description, &-number, &-text {
+            text-align: center;
+        }
+
+        &-title {
+            font-size: 50px;
+            line-height: 70px;
+            padding-bottom: 50px;
+        }
+
+        &-description {
+            font-size: 20px;
+            line-height: 30px;
+            padding-bottom: 50px;
+        }
+
+        &-number {
+            color: $primary;
+            font-size: 50px;
+            line-height: 70px;
+            padding-bottom: 50px;
+        }
+
+        &-text {
+            font-size: 20px;
+            line-height: 30px;
+            padding-bottom: 50px;
+
+            a {
+                color: #7e7e7e;
+                transition: 0.3s ease;
+
+                &:hover {
+                    color: $primary;
+                    transition: 0.3s ease;
+                }
+
+            }
+        }
+    }
+}
