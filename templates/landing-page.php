@@ -41,9 +41,20 @@
                         </div>
                     </div>
                 </main>
-             <?php } else {
-                echo "nie działa";
-            }
+             <?php } else { ?>
+                <main class="landing">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="landing__content d-flex flex-column justify-content-center">
+                                    <h1 class="landing__content-title">Nie udało się wysłać zgłoszenia</h1>
+                                    <span class="landing__content-description">Cos poszło nie tak, spróbój wypełnić formularz jeszcze raz</br>Upewnij się, ze wypelniles wszystkie wymagane pola</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            <?php }
         }
         else { ?>
             <main class="landing">
@@ -51,7 +62,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="landing__content d-flex flex-column justify-content-center">
-                                <h1 class="landing__content-title">Dziękujemy za przesłanie zgłosznia</h1>
+                                <h1 class="landing__content-title">Nie udało się wysłać zgłoszenia</h1>
                                 <span class="landing__content-description">Cos poszło nie tak, spróbój wypełnić formularz jeszcze raz</br>Upewnij się, ze wypelniles wszystkie wymagane pola</span>
                             </div>
                         </div>
