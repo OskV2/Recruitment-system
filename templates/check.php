@@ -41,7 +41,7 @@ if(isset($_POST['App_Id']) && !empty($_POST['App_Id'])){
             </div>
             <div class="col-6">
               <div class="d-flex flex-column">
-                <span class="check__output-date">Data rozmowy: <span id="date"><?php echo @$result['Data_rozmowy']; ?></span></span>
+                <span class="check__output-date">Data rozmowy: <span id="date"><?php echo !empty(@$result['Data_rozmowy']) ? @$result['Data_rozmowy'] : 'Nie ma'; ?></span></span>
               </div>
             </div>
           </div>

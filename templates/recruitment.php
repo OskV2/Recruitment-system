@@ -44,7 +44,7 @@
                 <section class="recruitment__form">
                     <h2 class="mb-4 recruitment__form-title">3. Złóż swoje podanie</h2>
                     <div class="recruitment__form-content">
-                    <form id="formularz" action="./landing-page.php" method="post" target="hiddenFrame" onsubmit="setTimeout(function () { window.location.reload(); }, 10)">
+                    <form id="formularz" action="./landing-page.php" method="post">
                             <input class="d-none" type="number" name="selectedOfferId" id="selectedOfferId" value="" />
 
                             <div class="d-flex">
@@ -74,7 +74,7 @@
 
                             <div class="d-flex">
                                 <div class="recruitment__form-more">
-                                    <input class="recruitment__form-input" placeholder="Dodatkowe informacje" id="additional_info" name="additional_info" maxlength="254">
+                                    <input class="recruitment__form-input" placeholder="Dodatkowe informacje" id="additional_info" name="additional_info">
                                 </div>
                             </div>
 
