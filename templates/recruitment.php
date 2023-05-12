@@ -74,7 +74,7 @@
 
                             <div class="d-flex">
                                 <div class="recruitment__form-more">
-                                    <input class="recruitment__form-input" placeholder="Dodatkowe informacje" id="additional_info" name="additional_info">
+                                    <input class="recruitment__form-input" placeholder="Dodatkowe informacje" id="additional_info" name="additional_info" maxlength="254">
                                 </div>
                             </div>
 
