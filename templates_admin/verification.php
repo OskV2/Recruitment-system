@@ -6,9 +6,6 @@ $query = "SELECT * FROM application";
 $result = $conn->query($query);
 $i = 0;
 
-$queryContract = "SELECT * FROM Contract_Type";
-$resultContract = $conn->query($queryContract);
-
 include('../header_admin.php');
 ?>
 
@@ -110,7 +107,11 @@ include('../header_admin.php');
                                                             umowa</span>
                                                         <select class="admin__collapse-item-content-more-column-select"
                                                             name="contract" id="contract"> 
-                                                            <?php foreach ($resultContract as $contract) { ?>
+                                                            
+                                                            <?php
+                                                            $queryContract = "SELECT * FROM Contract_Type";
+                                                            $resultContract = $conn->query($queryContract);
+                                                            foreach ($resultContract as $contract) { ?>
                                                                 <option value="<?php echo $contract[0] ?>">
                                                                     <?php echo $contract[1] ?>
                                                                 </option>
