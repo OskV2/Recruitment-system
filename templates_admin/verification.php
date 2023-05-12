@@ -92,7 +92,8 @@ include('../header_admin.php');
                                                 <div class="row d-flex">
 
                                                     <div>
-                                                    <input class="d-none" type="number" id="app_id" name="app_id"  value="<?php echo $rows['App_Id'] ?>">
+                                                        <input class="d-none" type="number" id="app_id" name="app_id"
+                                                            value="<?php echo $rows['App_Id'] ?>">
 
                                                     </div>
 
@@ -100,19 +101,26 @@ include('../header_admin.php');
                                                         <span class="admin__collapse-item-content-more-column-title">Termin
                                                             rozmowy</span>
                                                         <input class="admin__collapse-item-content-more-column-date"
-                                                            type="datetime-local" name="date" id="date">
+                                                            type="datetime-local" name="date" id="date" <?php
+                                                            if (!is_null($rows['Data_rozmowy'])) {
+                                                                ?>value="<?php echo $rows['Data_rozmowy'] ?>" <?php
+                                                            } else {
+                                                                echo "The variable is null.";
+                                                            }
+                                                            ?>>
                                                     </div>
                                                     <div class="col-3 admin__collapse-item-content-more-column">
                                                         <span class="admin__collapse-item-content-more-column-title">Proponowana
                                                             umowa</span>
                                                         <select class="admin__collapse-item-content-more-column-select"
-                                                            name="contract" id="contract"> 
-                                                            
+                                                            name="contract" id="contract">
                                                             <?php
                                                             $queryContract = "SELECT * FROM Contract_Type";
                                                             $resultContract = $conn->query($queryContract);
+
                                                             foreach ($resultContract as $contract) { ?>
-                                                                <option value="<?php echo $contract[0] ?>">
+                                                                <option value="<?php echo $contract[0] ?>" <?php if ($rows['Umowa'] == $contract[0])
+                                                                       echo 'selected'; ?>>
                                                                     <?php echo $contract[1] ?>
                                                                 </option>
                                                             <?php } ?>
@@ -125,15 +133,27 @@ include('../header_admin.php');
                                                             płacowe</span>
                                                         <input class="admin__collapse-item-content-more-column-input"
                                                             type="text" name="salary" id="salary"
-                                                            placeholder="Np. 2k, 2000, 2000-3000">
+                                                            <?php
+                                                            if (!is_null($rows['Placa'])) {
+                                                                ?>value="<?php echo $rows['Placa'] ?>" <?php
+                                                            } else {
+                                                                echo 'placeholder="np. 3000 lub 2500-3500"';
+                                                            }
+                                                            ?>
+                                                           >
                                                     </div>
                                                     <div class="col-3 admin__collapse-item-content-more-column">
                                                         <span class="admin__collapse-item-content-more-column-title">Dodatkowe
                                                             informacje</span>
                                                         <input class="admin__collapse-item-content-more-column-input"
                                                             type="text" name="notes" id="notes"
-                                                            placeholder="Własne uwagi dot. kandydata"
-                                                            value="EEEEE">
+                                                            <?php
+                                                            if (!is_null($rows['Notatki'])) {
+                                                                ?>value="<?php echo $rows['Notatki'] ?>" <?php
+                                                            } else {
+                                                                echo 'placeholder="Własne uwagi dot. kandydata"';
+                                                            }
+                                                            ?>>
                                                     </div>
                                                 </div>
                                                 <button
