@@ -20,7 +20,8 @@ if(isset($_POST['submit'])){
 
 
     if($run){
-        echo "działa";
+        header("Location: " . $_SERVER['HTTP_REFERER']);
+        exit();
     }
     else{
         echo "nie działa";

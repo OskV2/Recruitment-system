@@ -9,11 +9,11 @@
     $stmt->bindParam(':app_id', $app_id);
 
     if ($stmt->execute()) {
-        echo "Row updated successfully";
+        header("Location: " . $_SERVER['HTTP_REFERER']);
+        exit();
     } else {
         echo "Error updating row: " . $stmt->errorInfo()[2];
     }
 
     $conn = null;
-
 ?>

@@ -54,9 +54,9 @@ include('../header_admin.php');
                                         </a>
                                         <div class="col-3 admin__collapse-item-ab-form">
                                             <a href="../templates_sql/increment_status.php?App_Id=<?php echo $rows['App_Id']; ?>"
-                                                class="btn btn-outline-primary" target="_blank">Gotowe</a>
+                                                class="btn btn-outline-primary">Gotowe</a>
                                             <a href="../templates_sql/delete_application.php?App_Id=<?php echo $rows['App_Id']; ?>"
-                                                class="btn btn-outline-alert" target="_blank">Odrzuć</a>
+                                                class="btn btn-outline-alert">Odrzuć</a>
                                         </div>
                                     </div>
 

@@ -11,7 +11,8 @@
     $stmt->bindParam(':app_id', $app_id);
 
     if ($stmt->execute()) {
-        echo "Status updated successfully";
+        header("Location: " . $_SERVER['HTTP_REFERER']);
+        exit();
     } else {
         echo "Error updating status: " . $stmt->errorInfo()[2];
     }
