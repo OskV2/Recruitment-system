@@ -21,19 +21,26 @@ Then check if gulp installed properly
 3. Make sure you have [xampp](https://www.apachefriends.org/pl/download.html) installed 
 <br>
 Project should be placed in xampp installation folder
+
 <br>
 4. In directory "xampp/php/ext" paste 2 files that are in repository in "Extensions" folder
+
 <br>
 5. Run xampp apache
+
 <br>
 
 ![xampp](https://github.com/OskV2/Recruitment-system/assets/101113650/8a4ae401-e193-43a1-9c06-b738de12d64a)
 
 <br>
 ## Launching project
+
+<br>
 1. Open project in VS Code
+
 <br>
 2. Open new terminal in vscode
+
 <br>
 Install project packages
 ```
