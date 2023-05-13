@@ -33,7 +33,7 @@ Project should be placed in xampp installation folder
 
 ![xampp](https://github.com/OskV2/Recruitment-system/assets/101113650/8a4ae401-e193-43a1-9c06-b738de12d64a)
 
-<br>
+
 ## Launching project
 
 1. Open project in VS Code
@@ -42,7 +42,7 @@ Project should be placed in xampp installation folder
 
 Install project packages:
 
-<br>
+
 ```
 npm i
 ```
