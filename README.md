@@ -1,7 +1,7 @@
 # Recruitment-system
 Group project for studies
 ## Instalation
-1.To launch project make sure:
+1. To launch project make sure:
 <br>
 - you have installed [Node.js i npm](https://nodejs.org/en/)
 <br>
@@ -10,9 +10,6 @@ Group project for studies
 <br>
 ```
 node -v
-```
-<br>
-```
 npm -v
 ```
 2. Install gulp cli
@@ -21,9 +18,30 @@ npm -v
 npm install gulp-cli -g
 ```
 Then check if gulp installed properly
-![gulp](https://github.com/OskV2/Recruitment-system/assets/101113650/528dc707-8b10-447b-ba07-bed0a3e9c176)
-
-3. 
-
-
 <br>
+![gulp](https://github.com/OskV2/Recruitment-system/assets/101113650/528dc707-8b10-447b-ba07-bed0a3e9c176)
+<br>
+3. Make sure you have [xampp](https://www.apachefriends.org/pl/download.html) installed 
+<br>
+Project should be placed in xampp installation folder
+<br>
+4. In directory "xampp/php/ext" paste 2 files that are in repository in "Extensions" folder
+<br>
+5. Run xampp apache
+<br>
+![xampp](https://github.com/OskV2/Recruitment-system/assets/101113650/8a4ae401-e193-43a1-9c06-b738de12d64a)
+<br>
+## Launching project
+1. Open project in VS Code
+<br>
+2. Open new terminal in vscode
+<br>
+Install project packages
+```
+npm i
+```
+<br>
+Then simply run "gulp" command to launch project locally
+<br>
+![rungulp](https://github.com/OskV2/Recruitment-system/assets/101113650/a3fb8647-7da1-461b-b622-7b5da24471fc)
+
