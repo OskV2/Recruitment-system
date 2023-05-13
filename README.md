@@ -18,7 +18,7 @@ Then check if gulp installed properly
 ![gulp](https://github.com/OskV2/Recruitment-system/assets/101113650/528dc707-8b10-447b-ba07-bed0a3e9c176)
 
 <br>
-3. Make sure you have [xampp](https://www.apachefriends.org/pl/download.html) installed 
+3. Make sure you have installed [Xampp](https://www.apachefriends.org/pl/download.html)
 <br>
 Project should be placed in xampp installation folder
 
@@ -35,17 +35,21 @@ Project should be placed in xampp installation folder
 <br>
 ## Launching project
 
-<br>
 1. Open project in VS Code
 
-<br>
-2. Open new terminal in vscode
+2. Open a new terminal in VS Code
+
+Install project packages:
+
+
 
 <br>
 Install project packages
+<br>
 ```
 npm i
 ```
+
 <br>
 Then simply run "gulp" command to launch project locally
 <br>
