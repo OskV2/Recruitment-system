@@ -8,7 +8,8 @@ if(isset($_POST['submit'])){
     $Contract = $_POST['contract'];
     $Salary = $_POST['salary'];
     $Notes = $_POST['notes'];
-    if (is_null($Date)) {
+    if (!empty($Date)) {
+        $Date = date('Y-m-d H:i', strtotime("$Date"));
         $query = "UPDATE application SET Data_rozmowy = '$Date', Umowa = $Contract, Placa = '$Salary', Notatki = '$Notes' WHERE App_Id = $App_ID";
     }else{
         $query = "UPDATE application SET Umowa = $Contract, Placa = '$Salary', Notatki = '$Notes' WHERE App_Id = $App_ID";

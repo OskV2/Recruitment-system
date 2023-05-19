@@ -66,9 +66,37 @@
                                                         <a class="admin__collapse-item-content-more-column-link admin__collapse-item-content-more-column-link" href="<?php ?>">Plik CV</a>
                                                         <a class="admin__collapse-item-content-more-column-link admin__collapse-item-content-more-column-link" href="<?php ?>">List Motywacyjny</a>
                                                     </div>
+                                                    <div class="col-6 admin__collapse-item-content-more-column">
+                                                        <span class="admin__collapse-item-content-more-column-title">Dodatkowe informacje</span>
+                                                        <p><?php echo !empty($rows['Dod_Info']) ? $rows['Dod_Info'] : 'Brak dodatkowych informacji' ; ?></p>
+                                                    </div>
+                                                </div>
+
+                                                <span class="admin__collapse-item-content-psel"></span>
+
+                                                <div class="row">
                                                     <div class="col-3 admin__collapse-item-content-more-column">
-                                                        <span>Dodatkowe informacje</span>
-                                                        <p><?php ?></p>
+                                                        <span class="admin__collapse-item-content-more-column-title">Proponowana umowa</span>
+                                                        <span>
+                                                            <?php
+                                                                if (!empty($rows['Umowa'])) {
+                                                                    $App_Status_Name = "SELECT Con_Type_Name FROM dbo.Contract_Type WHERE Con_Type_Id = {$rows['Umowa']}";
+                                                                    $App_Status_Name_Restult = $conn->query($App_Status_Name);
+                                                                    $App_Status_Name_arr = $App_Status_Name_Restult->fetch(PDO::FETCH_ASSOC);
+                                                                    echo $App_Status_Name_arr['Con_Type_Name'];
+                                                                } else {
+                                                                    echo 'Nie podano';
+                                                                }
+                                                            ?>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-3 admin__collapse-item-content-more-column">
+                                                        <span class="admin__collapse-item-content-more-column-title">Widełki płacowe</span>
+                                                        <span><?php echo !empty($rows['Placa']) ? $rows['Placa'] : 'Nie podano'; ?></span>
+                                                    </div>
+                                                    <div class="col-6 admin__collapse-item-content-more-column">
+                                                        <span class="admin__collapse-item-content-more-column-title">Dodatkowe informacje</span>
+                                                        <span><?php echo !empty($rows['Notatki']) ? $rows['Notatki'] : 'Nie podano'; ?></span>
                                                     </div>
                                                 </div>
                                             </div>

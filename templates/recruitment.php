@@ -49,18 +49,18 @@
 
                             <div class="d-flex">
                                 <div class="recruitment__form-name">
-                                    <input class="w-100 recruitment__form-input" type="text" placeholder="Imię *" id="imie" name="imie">
+                                    <input class="w-100 recruitment__form-input" type="text" placeholder="Imię *" id="imie" name="imie" minlength="1" required>
                                 </div>
                                 <div class="recruitment__form-surname">
-                                    <input class="recruitment__form-input" type="text" placeholder="Nazwisko *" id="nazwisko" name="nazwisko">
+                                    <input class="recruitment__form-input" type="text" placeholder="Nazwisko *" id="nazwisko" name="nazwisko" minlength="1" required>
                                 </div>
                             </div> 
                             <div class="d-flex">
                                 <div class="recruitment__form-email">
-                                    <input class="recruitment__form-input" type="text" placeholder="E-mail *"  id="email" name="email">
+                                    <input class="recruitment__form-input" type="email" placeholder="E-mail *"  id="email" name="email" minlength="1" required>
                                 </div>
                                 <div class="recruitment__form-phone">
-                                    <input class="recruitment__form-input" type="text" placeholder="Numer telefonu *" id="telefon" name="telefon">
+                                    <input class="recruitment__form-input" type="number" placeholder="Numer telefonu *" id="telefon" name="telefon" minlength="1" required>
                                 </div>
                             </div>
                             <div class="d-flex">

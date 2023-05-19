@@ -76,7 +76,7 @@
                                                         <a class="admin__collapse-item-content-more-column-link admin__collapse-item-content-more-column-link" href="<?php ?>">Plik CV</a>
                                                         <a class="admin__collapse-item-content-more-column-link admin__collapse-item-content-more-column-link" href="<?php ?>">List Motywacyjny</a>
                                                     </div>
-                                                    <div class="col-3 admin__collapse-item-content-more-column">
+                                                    <div class="col-6 admin__collapse-item-content-more-column">
                                                         <span class="admin__collapse-item-content-more-column-title">Dodatkowe informacje</span>
                                                         <p><?php echo !empty($rows['Dod_Info']) ? $rows['Dod_Info'] : 'Brak dodatkowych informacji' ; ?></p>
                                                     </div>
