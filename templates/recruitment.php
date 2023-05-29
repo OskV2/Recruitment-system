@@ -25,6 +25,12 @@
                         <div class="d-flex">
                             <select class="w-100 recruitment__offer-select" id="select" name="job"></select>
                         </div>
+                        <select class="recruitment__offer-select" name="cars" id="cars" form="carform">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
                     </div>
 
                     <h2 class="recruitment__offer-title">2. Przeczytaj ofertę</h2>
