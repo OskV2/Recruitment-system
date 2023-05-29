@@ -39,10 +39,12 @@
             font-size: 18px;
             font-weight: 400;
             line-height: 30px;
+            margin-bottom: 25px;
         }
 
         &-content {
             padding-left: 40px;
+            margin-bottom: 25px;
 
             span {
                 color: $white;
@@ -51,25 +53,33 @@
 
         &-select {
             margin-bottom: 20px;
+            padding-left: 30px;
+
+            height: 60px;
+            background-color: #252525;
+            border-radius: 75px;
+            color: $white;
+            font-size: 24px;
+            line-height: 40px;
+            font-weight: 500;
+            border: unset;
         }
 
         &-requirements, &-benefits {
             list-style: none;
+            margin-bottom: 25px;
             
             li {
                 display: flex;
+                gap: 10px;
                 align-items: center;
+                color: $white;
+                margin-bottom: 5px;
 
                 span {
                     color: $white;
                 }
             }
-        }
-
-        &-requirements {
-        }
-
-        &-benefits {
         }
     }
 
@@ -100,21 +110,6 @@
             }
         }
 
-        &-textarea {
-            width: 100%;
-            background-color: #252525;
-            border-radius: 75px;
-            height: 50px;
-            margin: 0px 0px 30px 0px;
-            padding: 20px 0px 0px 40px;
-            border: none;
-            color: $white; 
-
-            &::placeholder {
-                color: #7e7e7e;
-            }
-        }
-
         &-name {
             width: 345px;
             margin-right: 20px;
@@ -133,12 +128,37 @@
             width: 405px;
         }
 
-        &-href {
-            width: 1100px;
+        &-github {
+            width: 550px;
+            margin-right: 20px;
+        }
+
+        &-linkedin {
+            width: 550px;
         }
 
         &-more {
             width: 1275px;
+        }
+
+        &-file {
+            color: #7e7e7e;
+            background-color: #252525;
+
+            height: 50px;
+            width:200px;
+            border-radius: 75px;
+            
+            display: flex;
+            align-items: center;
+            
+            padding-left: 40px;
+            margin-right: 20px;
+            cursor: pointer;   
+        }
+
+        input[type='file'] {
+            display: none;
         }
 
     }

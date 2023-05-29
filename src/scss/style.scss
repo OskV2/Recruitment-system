@@ -1,3 +1,10 @@
+//Colors
+$primary: #1A8FDD;
+$white: #fff;
+$black: #000;
+$gray: #252525;
+$lightgray:#7e7e7e;
+
 //Apis
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -5,10 +12,14 @@
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 //Files
+@import "admin";
 @import "footer";
 @import "header";
 @import "frontpage";
 @import "recruitment";
+@import "check";
+@import "landing-page";
+@import "404";
 
 /*
 *
@@ -20,6 +31,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, ul, li {
     margin: 0;
     padding: 0;
     font-family: 'Inter';
+    color: $white;
 }
 
 a {
@@ -30,13 +42,6 @@ a {
         text-decoration: none;
     }
 }
-
-//Colors
-$primary: #1A8FDD;
-$white: #fff;
-$black: #000;
-$gray: #252525;
-$lightgray:#7e7e7e;
 
 //Buttons
 .btn {
@@ -65,6 +70,15 @@ $lightgray:#7e7e7e;
 
             &:hover {
                 
+            }
+        }
+
+        &-alert {
+            background-color: $black;
+            border: 1px solid red;
+
+            &:hover {
+                background-color: red;
             }
         }
     }
